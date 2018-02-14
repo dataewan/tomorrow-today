@@ -1,28 +1,89 @@
-.App {
-  text-align: center;
+
+.containerrow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.story{
+    order: 1;
+    width: 200px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.map{
+    order: 2;
+    width: 400px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.demographics{
+    order: 3;
+    width: 200px;
 }
 
-.App-intro {
-  font-size: large;
+.timeseries{
+    order: 4;
+    width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.regionfilter{
+    height: 15px;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+/*
+ * Styling the demographic displays
+ */
+
+svg.demographic_svg{
+    padding: 0px;
+}
+
+div.demographic_measurename{
+    font-weight: bold;
+    padding-top: 25px;
+    font-size:10px;
+}
+
+div.demographic_measurement{
+    font-size:10px;
+    font-variant: italic;
+}
+
+div.selectedDemographic{
+    background-color: #f9e039;
+}
+
+div.unselectedDemographic{
+}
+
+div.demographictable{
+    display: block;
+    width: 200px;
+    height: 350px;
+    font-size: 8px;
+}
+
+div.highlightedplot{
+    background-color: #f9e039;
+}
+
+@media only screen and (max-width: 750px) and (min-width: 601px){
+    .containerrow{
+        padding-left: 5%;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .containerrow{
+        flex-direction: column;
+        padding-left: 0;
+        width: 100%
+    }
 }
